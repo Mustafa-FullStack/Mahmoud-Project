@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<title>Mahmoud Abdalla | Graphic Designer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased" dir="rtl" lang="ar">
+<button class="lang-btn" onclick="toggleLanguage()"><i class="fas fa-globe ml-2"></i> <span id="lang-text">English</span></button>
+<canvas class="h-full w-full left-0 top-0 fixed pointer-events-none z-0" id="particles-canvas"></canvas>
+<nav class="border-slate-800 w-full backdrop-blur-md bg-slate-900/90 border-b fixed z-50">
+<div class="mx-auto container px-6 py-4">
+<div class="flex items-center justify-between">
+<a class="font-bold text-2xl bg-clip-text bg-gradient-to-r from-indigo-400 text-transparent to-purple-400" href="#home" data-translate="name">محمود عبدالله </a>
+<button class="text-slate-300 hover:text-white md:hidden text-2xl" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+<div class="hidden md:flex space-x-8 space-x-reverse" id="nav-links">
+<a class="transition hover:text-white nav-link text-slate-300" href="#home" data-translate="nav_home">الرئيسية</a>
+<a class="transition hover:text-white nav-link text-slate-300" href="#about" data-translate="nav_about">عني</a>
+<a class="transition hover:text-white nav-link text-slate-300" href="#skills" data-translate="nav_skills">المهارات</a>
+<a class="transition hover:text-white nav-link text-slate-300" href="#projects" data-translate="nav_projects">المشاريع</a>
+<a class="transition hover:text-white nav-link text-slate-300" href="#experience" data-translate="nav_experience">الخبرة</a>
+<a class="rounded-full transition bg-indigo-600 btn-glow hover:bg-indigo-700 px-6 py-2" href="#contact" data-translate="nav_contact">تواصل معي</a>
+</div>
+</div>
+<div class="border-slate-800 border-t hidden md:hidden mt-4 pb-4 pt-4" id="mobile-menu">
+<a class="text-slate-300 hover:text-white block py-2" href="#home" data-translate="nav_home">الرئيسية</a>
+<a class="text-slate-300 hover:text-white block py-2" href="#about" data-translate="nav_about">عني</a>
+<a class="text-slate-300 hover:text-white block py-2" href="#skills" data-translate="nav_skills">المهارات</a>
+<a class="text-slate-300 hover:text-white block py-2" href="#projects" data-translate="nav_projects">المشاريع</a>
+<a class="block py-2 text-indigo-400" href="#contact" data-translate="nav_contact">تواصل معي</a>
+</div>
+</div>
+</nav>
+<section class="flex items-center justify-center min-h-screen overflow-hidden pt-20 relative" id="home">
+<div class="relative mx-auto container px-6 z-10">
+<div class="flex items-center flex-col md:flex-row gap-12 justify-between">
+<div class="md:w-1/2 md:text-right text-center" id="hero-text">
+<div class="rounded-full py-1 bg-indigo-900/50 text-indigo-300 border border-indigo-500/30 inline-block mb-4 px-4 text-sm" data-translate="welcome">مرحباً بكم في ملفي الشخصي</div>
+<h1 class="font-bold mb-6 leading-tight md:text-7xl text-5xl"><span class="bg-clip-text bg-gradient-to-r from-indigo-400 text-transparent to-pink-400 via-purple-400" data-translate="name">محمود عبدالله</span></h1>
+<h2 class="text-slate-400 mb-6 h-12 md:text-3xl text-2xl"><span class="typing-text" id="typing-text"></span></h2>
+<p class="text-slate-400 leading-relaxed mb-8 text-lg" data-translate="hero_desc">بخبرة تمتد لأكثر من 11 عاماً، أقدم حلولاً بصرية مبتكرة تبني هويات رقمية قوية وتضمن لعلامتك التجارية التميز والصدارة على منصات التواصل.</p>
+<div class="flex justify-center flex-col gap-4 md:justify-start sm:flex-row">
+<a class="rounded-full transition transform bg-indigo-600 btn-glow hover:bg-indigo-700 hover:scale-105 px-8 py-4 text-center" href="#projects" data-translate="view_work">شاهد أعمالي </a>
+<a class="rounded-full transition border border-slate-600 hover:bg-indigo-900/20 hover:border-indigo-500 px-8 py-4 text-center" href="Mustafa_Abdalla_CV.pdf" data-translate="download_cv" download="Mahmoud_Abdalla_CV" target="_blank">تحميل السيرة الذاتية</a>
+</div>
+<div class="flex justify-center md:justify-start gap-6 mt-12">
+<a class="flex items-center justify-center h-12 w-12 rounded-full bg-slate-800 hover:scale-110 transform transition hover:bg-pink-600" href="https://wa.me/201148696845" target="_blank" rel="noopener noreferrer"><i class="text-xl fab fa-whatsapp text-white"></i> </a>
+<a class="flex items-center justify-center h-12 w-12 rounded-full bg-slate-800 hover:scale-110 transform transition hover:bg-sky-500" href="https://www.behance.net/mhmoudabdalla84" target="_blank" rel="noopener noreferrer"><i class="text-xl fab fa-behance"></i></a>
+</div>
+</div>
+<div class="relative md:w-1/2">
+<div class="relative mx-auto h-72 md:h-96 md:w-96 w-72">
+<div class="rounded-full absolute blur-3xl animate-pulse bg-gradient-to-r from-indigo-500/20 inset-0 to-purple-500/20"></div>
+<div class="rounded-full h-full bg-slate-800 border-4 border-slate-800 overflow-hidden relative shadow-2xl w-full">
+<img class="h-full w-full contrast-110 object-cover object-top" src="https://res.cloudinary.com/dzx6czfvn/image/upload/v1770382106/photo_uxwood.webp" alt="Mahmoud Abdalla" loading="lazy">
+</div>
+<div class="flex items-center justify-center h-12 w-12 rounded-lg absolute animate-bounce border -right-4 bg-[#001E36] border-[#31A8FF] shadow-[0_0_15px_rgba(49,168,255,0.4)] top-10" style="animation-duration:3s;z-index:20"><span class="font-bold text-xl text-[#31A8FF]">Ps</span></div>
+<div class="flex items-center justify-center h-12 w-12 rounded-lg absolute animate-bounce border -left-4 bg-[#120024] border-[#D291FF] shadow-[0_0_15px_rgba(210,145,255,0.4)] top-10" style="animation-duration:3.2s;z-index:20"><span class="font-bold text-xl text-[#D291FF]">Ae</span></div>
+<div class="flex items-center justify-center h-12 w-12 rounded-lg absolute animate-bounce border -left-4 bg-[#261300] border-[#FF9A00] bottom-10 shadow-[0_0_15px_rgba(255,154,0,0.4)]" style="animation-duration:2.5s;z-index:20"><span class="font-bold text-xl text-[#FF9A00]">Ai</span></div>
+<div class="flex items-center justify-center h-12 w-12 rounded-lg absolute animate-bounce border -right-4 bg-[#2B0018] border-[#FF3366] bottom-10 shadow-[0_0_15px_rgba(255,51,102,0.4)]" style="animation-duration:2.8s;z-index:20"><span class="font-bold text-xl text-[#FF3366]">Id</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute animate-bounce bottom-10 -translate-x-1/2 left-1/2 transform"><i class="fas fa-chevron-down text-2xl text-slate-500"></i></div>
+</section>
+<section class="relative bg-slate-900/50 py-20" id="about">
+<div class="mx-auto container px-6">
+<div class="flex items-center flex-col md:flex-row gap-12">
+<div class="reveal md:w-1/2">
+<div class="relative">
+<img class="border-slate-700 border rounded-2xl shadow-2xl" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000&auto=format&fit=crop" alt="Design Work">
+<div class="absolute -bottom-6 -left-6 bg-indigo-600 p-6 rounded-2xl">
+<div class="font-bold text-3xl">11+</div>
+<div class="text-sm" data-translate="years_exp">سنوات خبرة</div>
+</div>
+</div>
+</div>
+<div class="reveal md:w-1/2">
+<h2 class="font-bold text-3xl md:text-4xl mb-6" data-translate="about_title">نبذة عني</h2>
+<p class="text-slate-400 leading-relaxed mb-6" data-translate="about_desc">مصمم جرافيك متخصص في بناء الهويات البصرية وتصميمات السوشيال ميديا، بخبرة تمتد لأكثر من 11 عاماً في تحويل الأفكار إلى واقع بصري ملموس. شغفي يكمن في ابتكار تصاميم فريدة تجمع بين الجمال والوظيفة، مع التركيز على إبراز الرسالة التسويقية لكل علامة تجارية بأفضل صورة ممكنة.</p>
+<div class="grid gap-6 grid-cols-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-900/50 text-indigo-400"><i class="fas fa-lightbulb"></i></div>
+<div>
+<div class="font-bold text-right" data-translate="creative">إبداعي</div>
+<div class="text-sm text-slate-500 text-right" data-translate="creative_desc">أفكار مبتكرة وغير تقليدية</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-purple-900/50 text-purple-400"><i class="fas fa-bezier-curve"></i></div>
+<div>
+<div class="font-bold text-right" data-translate="precise">دقة</div>
+<div class="text-sm text-slate-500 text-right" data-translate="precise_desc">اهتمام بأدق تفاصيل التصميم</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-pink-900/50 text-pink-400"><i class="fas fa-paint-brush"></i></div>
+<div>
+<div class="font-bold text-right" data-translate="harmonious">متناسق</div>
+<div class="text-sm text-slate-500 text-right" data-translate="harmonious_desc">تناسق ألوان وهوية قوية</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-900/50 text-blue-400"><i class="fas fa-award"></i></div>
+<div>
+<div class="font-bold text-right" data-translate="professional">احترافي</div>
+<div class="text-sm text-slate-500 text-right" data-translate="professional_desc">تسليم في الموعد وجودة عالية</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="hidden bg-black/95 fixed inset-0 items-center justify-center p-4 z-[100]" id="image-modal">
+<button class="absolute hover:text-indigo-400 text-white z-[110] right-6 text-3xl top-6" id="close-modal"><i class="fas fa-times"></i></button>
+<button class="absolute hover:text-indigo-400 text-white z-[110] p-4 text-4xl left-4" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+<div class="flex items-center flex-col max-w-4xl relative w-full">
+<img class="duration-300 max-h-[85vh] rounded-lg shadow-2xl transition-opacity w-auto" src="" id="modal-img">
+<div class="font-bold mt-4 bg-slate-800/50 px-4 py-1 rounded-full text-white" id="image-counter"></div>
+</div>
+<button class="absolute hover:text-indigo-400 text-white z-[110] p-4 text-4xl right-4" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+</div>
+<section class="py-20" id="skills">
+<div class="mx-auto container px-6">
+<div class="reveal text-center mb-16">
+<h2 class="font-bold text-3xl md:text-4xl mb-4" data-translate="skills_title">مهارات التصميم</h2>
+<p class="text-slate-400" data-translate="skills_desc">الأدوات والبرامج التي أتقنها لتقديم أفضل الحلول البصرية</p>
+</div>
+<div class="mx-auto gap-12 grid md:grid-cols-2 max-w-4xl">
+<div class="reveal">
+<h3 class="flex items-center font-bold gap-2 mb-6 text-xl"><i class="fas fa-palette text-indigo-400"></i> <span data-translate="design_tools">برامج التصميم الأساسية</span></h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2"><span>Adobe Photoshop</span> <span class="text-indigo-400">95%</span></div>
+<div class="rounded-full overflow-hidden bg-slate-700 h-2"><div class="rounded-full h-full skill-bar" style="width:0%" data-width="95%"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-2"><span>Adobe Illustrator</span> <span class="text-indigo-400">90%</span></div>
+<div class="rounded-full overflow-hidden bg-slate-700 h-2"><div class="rounded-full h-full skill-bar" style="width:0%" data-width="90%"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-2"><span>Adobe InDesign</span> <span class="text-indigo-400">85%</span></div>
+<div class="rounded-full overflow-hidden bg-slate-700 h-2"><div class="rounded-full h-full skill-bar" style="width:0%" data-width="85%"></div></div>
+</div>
+</div>
+</div>
+<div class="reveal">
+<h3 class="flex items-center font-bold gap-2 mb-6 text-xl"><i class="fas fa-magic text-purple-400"></i> <span data-translate="specialties">مجالات التخصص</span></h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2"><span data-translate="branding">تصميم الهوية البصرية (Branding)</span> <span class="text-purple-400">92%</span></div>
+<div class="rounded-full overflow-hidden bg-slate-700 h-2"><div class="rounded-full h-full skill-bar" style="width:0%" data-width="92%"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-2"><span data-translate="social_media">تصاميم السوشيال ميديا</span> <span class="text-purple-400">98%</span></div>
+<div class="rounded-full overflow-hidden bg-slate-700 h-2"><div class="rounded-full h-full skill-bar" style="width:0%" data-width="98%"></div></div>
+</div>
+<div>
+<div class="flex justify-between mb-2"><span data-translate="photo_editing">تعديل الصور ودمجها</span> <span class="text-purple-400">95%</span></div>
+<div class="rounded-full overflow-hidden bg-slate-700 h-2"><div class="rounded-full h-full skill-bar" style="width:0%" data-width="95%"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center flex-wrap gap-8 mt-16 reveal">
+<div class="flex items-center justify-center transition hover:scale-110 bg-slate-800 transform cursor-default flex-col h-20 rounded-2xl shadow-lg w-20 hover:bg-blue-900" title="Photoshop"><span class="font-bold text-2xl text-[#31A8FF]">Ps</span></div>
+<div class="flex items-center justify-center transition hover:scale-110 bg-slate-800 transform cursor-default flex-col h-20 rounded-2xl shadow-lg w-20 hover:bg-orange-900" title="Illustrator"><span class="font-bold text-2xl text-[#FF9A00]">Ai</span></div>
+<div class="flex items-center justify-center transition hover:scale-110 bg-slate-800 transform cursor-default flex-col h-20 rounded-2xl shadow-lg w-20 hover:bg-pink-900" title="InDesign"><span class="font-bold text-2xl text-[#FF3366]">Id</span></div>
+<div class="flex items-center justify-center transition hover:scale-110 bg-slate-800 transform cursor-default flex-col h-20 rounded-2xl shadow-lg w-20 hover:bg-purple-900" title="After Effects"><span class="font-bold text-2xl text-[#D291FF]">Ae</span></div>
+</div>
+</section>
+<section class="py-20 bg-slate-900/50" id="projects">
+<div class="mx-auto container px-6">
+<div class="reveal text-center mb-16">
+<h2 class="font-bold text-3xl md:text-4xl mb-4" data-translate="projects_title">أعمالي المميزة</h2>
+<p class="text-slate-400" data-translate="projects_desc">نماذج من تصاميمي الإبداعية في مختلف المجالات</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 lg:grid-cols-3">
+<div class="reveal border border-slate-700 overflow-hidden project-card rounded-2xl">
+<div class="relative overflow-hidden group">
+<img class="transition transform w-full duration-500 group-hover:scale-110 h-48 object-cover" src="https://images.unsplash.com/photo-1635405074683-96d6921a2a68?w=600&h=400&fit=crop" alt="Branding Design">
+<div class="flex items-center justify-center transition absolute bg-black/60 gap-4 group-hover:opacity-100 inset-0 opacity-0">
+<a class="flex items-center justify-center transition hover:scale-110 rounded-full bg-white h-10 open-album text-black w-10" href="#" data-album="typography"><i class="fas fa-eye"></i></a>
+</div>
+</div>
+<div class="text-right p-6">
+<h3 class="font-bold text-xl mb-2" data-translate="branding_design">تصميمات البراندنج</h3>
+<p class="text-sm text-slate-400 mb-4" data-translate="branding_desc">بناء استراتيجية بصرية شاملة تشمل النظم اللونية، الخطوط المخصصة، وكتيب معايير العلامة التجارية.</p>
+<div class="flex gap-2 flex-wrap justify-end">
+<span class="rounded-full py-1 px-3 text-xs bg-pink-900/50 text-pink-300">InDesign</span>
+<span class="rounded-full py-1 px-3 text-xs bg-blue-900/50 text-blue-300">Photoshop</span>
+<span class="rounded-full py-1 px-3 text-xs bg-orange-900/50 text-orange-300">Illustrator</span>
+</div>
+</div>
+</div>
+<div class="reveal border border-slate-700 overflow-hidden project-card rounded-2xl">
+<div class="relative overflow-hidden group">
+<img class="transition transform w-full duration-500 group-hover:scale-110 h-48 object-cover" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop" alt="Social Media Design">
+<div class="flex items-center justify-center transition absolute bg-black/60 gap-4 group-hover:opacity-100 inset-0 opacity-0">
+<a class="flex items-center justify-center transition hover:scale-110 rounded-full bg-white h-10 open-album text-black w-10" href="#" data-album="social"><i class="fas fa-eye"></i></a>
+</div>
+</div>
+<div class="text-right p-6">
+<h3 class="font-bold text-xl mb-2" data-translate="social_design">تصاميم سوشيال ميديا</h3>
+<p class="text-sm text-slate-400 mb-4" data-translate="social_desc">حملة إعلانية لمنصات التواصل الاجتماعي لزيادة التفاعل وبناء حضور رقمي قوي.</p>
+<div class="flex gap-2 flex-wrap justify-end">
+<span class="rounded-full py-1 px-3 text-xs bg-purple-900/50 text-purple-300">Social Media</span>
+<span class="rounded-full py-1 px-3 text-xs bg-indigo-900/50 text-indigo-300">Photoshop</span>
+</div>
+</div>
+</div>
+<div class="reveal border border-slate-700 overflow-hidden project-card rounded-2xl">
+<div class="relative overflow-hidden group">
+<img class="transition transform w-full duration-500 group-hover:scale-110 h-48 object-cover" src="3 (7).webp" alt="Booth Design">
+<div class="flex items-center justify-center transition absolute bg-black/60 gap-4 group-hover:opacity-100 inset-0 opacity-0">
+<a class="flex items-center justify-center transition hover:scale-110 rounded-full bg-white h-10 open-album text-black w-10" href="#" data-album="manipulation"><i class="fas fa-eye"></i></a>
+</div>
+</div>
+<div class="text-right p-6">
+<h3 class="font-bold text-xl mb-2" data-translate="booth_design">تصميمات الـ Booth</h3>
+<p class="text-sm text-slate-400 mb-4" data-translate="booth_desc">تصميم منصات العرض والمعارض التجارية بأسلوب عصري يضمن استغلال المساحات وتجسيد الهوية.</p>
+<div class="flex gap-2 flex-wrap justify-end">
+<span class="rounded-full py-1 px-3 text-xs bg-blue-900/50 text-blue-300">3D Modeling</span>
+<span class="rounded-full py-1 px-3 text-xs bg-orange-900/50 text-orange-300">Illustrator</span>
+<span class="rounded-full py-1 px-3 text-xs bg-blue-700/50 text-white">Photoshop</span>
+</div>
+</div>
+</div>
+</div>
+<div class="reveal text-center mt-16">
+<a class="font-bold text-indigo-400 gap-2 hover:text-indigo-300 inline-flex items-center text-lg transition" href="https://www.behance.net/mhmoudabdalla84" target="_blank"><span data-translate="view_more">مشاهدة المزيد على Behance</span> <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
+</section>
+<section class="py-20" id="experience">
+<div class="mx-auto container px-6">
+<div class="reveal text-center mb-16">
+<h2 class="font-bold text-3xl md:text-4xl mb-4" data-translate="experience_title">الخبرة العملية</h2>
+<p class="text-slate-400" data-translate="experience_desc">عقد من الإبداع في صياغة الهويات البصرية</p>
+</div>
+<div class="relative mx-auto max-w-3xl">
+<div class="absolute top-0 bg-slate-700 bottom-0 right-0 timeline-line w-0.5"></div>
+<div class="reveal pr-8 relative timeline-item mb-12">
+<div class="transition border border-slate-700 bg-slate-800/50 hover:border-indigo-500 p-6 rounded-2xl">
+<div class="flex justify-between mb-2 flex-col md:flex-row">
+<h3 class="font-bold text-xl text-indigo-400" data-translate="job1_title">مصمم مطبوعات</h3>
+<span class="text-sm text-slate-500">2022 - 2026</span>
+</div>
+<div class="text-slate-300 mb-2" data-translate="job1_company">تطوير وتنفيذ الهوية البصرية باحتراف</div>
+<p class="text-sm text-slate-400" data-translate="job1_desc">متخصص في تصميم كافة أنواع المطبوعات (كروت – بروشورات – فلايرات – بانرات – باكدچينج)، مع الالتزام بالهوية البصرية، مواعيد التسليم، ومعايير الطباعة الاحترافية.</p>
+</div>
+</div>
+<div class="reveal pr-8 relative timeline-item mb-12">
+<div class="transition border border-slate-700 bg-slate-800/50 hover:border-indigo-500 p-6 rounded-2xl">
+<div class="flex justify-between mb-2 flex-col md:flex-row">
+<h3 class="font-bold text-xl text-indigo-400" data-translate="job2_title">مصمم جرافيك أول (Senior)</h3>
+<span class="text-sm text-slate-500">2018 - 2022</span>
+</div>
+<div class="text-slate-300 mb-2" data-translate="job2_company">وكالة إبداع متكاملة</div>
+<p class="text-sm text-slate-400" data-translate="job2_desc">تطوير أكثر من 100 هوية تجارية ناجحة، التخصص في الدمج الرقمي المتقدم (Manipulation)، وتصميم واجهات المستخدم البصرية الأكثر تفاعلية.</p>
+</div>
+</div>
+<div class="reveal pr-8 relative timeline-item">
+<div class="transition border border-slate-700 bg-slate-800/50 hover:border-indigo-500 p-6 rounded-2xl">
+<div class="flex justify-between mb-2 flex-col md:flex-row">
+<h3 class="font-bold text-xl text-indigo-400" data-translate="job3_title">مصمم جرافيك (Junior)</h3>
+<span class="text-sm text-slate-500">2015 - 2018</span>
+</div>
+<div class="text-slate-300 mb-2" data-translate="job3_company">بداية الرحلة الإبداعية</div>
+<p class="text-sm text-slate-400" data-translate="job3_desc">تأسيس المهارات في المطبوعات والتصاميم التجارية الأساسية، وإتقان أدوات Adobe Photoshop و Illustrator لخدمة العملاء المحليين.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative overflow-hidden bg-slate-900/50 py-20" id="contact">
+<div class="absolute top-0 h-full left-0 w-full">
+<div class="rounded-full absolute blur-3xl h-72 w-72 bg-indigo-500/10 left-20 top-20"></div>
+<div class="rounded-full absolute blur-3xl h-72 w-72 bg-purple-500/10 bottom-20 right-20"></div>
+</div>
+<div class="relative mx-auto container px-6 z-10">
+<div class="reveal text-center mb-16">
+<h2 class="font-bold text-3xl md:text-4xl mb-4" data-translate="contact_title">تواصل معي</h2>
+<p class="text-slate-400" data-translate="contact_desc">لدي مشروع في بالك؟ دعنا نتحدث عنه!</p>
+</div>
+<div class="mx-auto gap-12 grid md:grid-cols-2 max-w-5xl">
+<div class="reveal">
+<h3 class="font-bold text-2xl mb-6" data-translate="contact_info">معلومات التواصل</h3>
+<p class="text-slate-400 mb-8" data-translate="contact_text">لا تتردد في التواصل معي لأي استفسار أو فرصة عمل. أنا متاح دائماً للمناقشة والتعاون في مشاريع جديدة.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-900/50 text-indigo-400"><i class="fas fa-envelope"></i></div>
+<div>
+<div class="text-sm text-slate-500" data-translate="email_label">البريد الإلكتروني</div>
+<div class="font-bold" dir="ltr"><a class="transition hover:text-indigo-400" href="mailto:mhmoudabdalla52@gmail.com">mhmoudabdalla52@gmail.com</a></div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-900/50 text-indigo-400"><i class="fas fa-phone"></i></div>
+<div>
+<div class="text-sm text-slate-500 text-right" data-translate="phone_label">الهاتف</div>
+<div class="font-bold" dir="ltr"><a class="transition hover:text-indigo-400" href="tel:+201148696845">+20 11 48 69 68 45</a></div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-900/50 text-indigo-400"><i class="fas fa-map-marker-alt"></i></div>
+<div>
+<div class="text-sm text-slate-500" data-translate="location_label">الموقع</div>
+<div class="font-bold" data-translate="location">القاهرة، مصر</div>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="font-bold mb-4" data-translate="follow_me">تابعني على</h4>
+<div class="flex gap-4">
+<a class="flex items-center justify-center h-12 w-12 rounded-full bg-slate-800 hover:scale-110 transform transition hover:bg-pink-600" href="https://wa.me/201148696845" target="_blank" rel="noopener noreferrer"><i class="text-xl fab fa-whatsapp text-white"></i> </a>
+<a class="flex items-center justify-center h-12 w-12 rounded-full bg-slate-800 hover:scale-110 transform transition hover:bg-sky-500" href="https://www.behance.net/mhmoudabdalla84" target="_blank" rel="noopener noreferrer"><i class="text-xl fab fa-behance"></i></a>
+</div>
+</div>
+</div>
+<div class="reveal">
+<form action="https://formspree.io/f/mzdvynnr" class="space-y-6" id="contact-form" method="POST">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="font-bold mb-2 block text-sm" data-translate="form_name">الاسم</label>
+<input class="transition border border-slate-700 bg-slate-800 focus:border-indigo-500 focus:outline-none px-4 py-3 rounded-lg w-full" data-translate-placeholder="your_name" name="name" placeholder="اسمك" required>
+</div>
+<div>
+<label class="font-bold mb-2 block text-sm" data-translate="form_email">البريد الإلكتروني</label>
+<input class="transition border border-slate-700 bg-slate-800 focus:border-indigo-500 focus:outline-none px-4 py-3 rounded-lg w-full" data-translate-placeholder="your_email" name="email" placeholder="بريدك الإلكتروني" required id="user-email" type="email">
+</div>
+</div>
+<div>
+<label class="font-bold mb-2 block text-sm" data-translate="form_subject">الموضوع</label>
+<input class="transition border border-slate-700 bg-slate-800 focus:border-indigo-500 focus:outline-none px-4 py-3 rounded-lg w-full" data-translate-placeholder="message_subject" name="subject" placeholder="موضوع الرسالة">
+</div>
+<div>
+<label class="font-bold mb-2 block text-sm" data-translate="form_message">الرسالة</label>
+<textarea class="transition border border-slate-700 bg-slate-800 focus:border-indigo-500 focus:outline-none px-4 py-3 rounded-lg w-full resize-none" data-translate-placeholder="write_message" name="message" placeholder="اكتب رسالتك هنا..." required rows="5"></textarea>
+</div>
+<button class="font-bold bg-gradient-to-r btn-glow from-indigo-600 hover:from-indigo-700 hover:scale-[1.02] hover:to-purple-700 py-4 rounded-lg to-purple-600 transform transition w-full" id="submit-btn" data-translate="send_message" type="submit">إرسال الرسالة</button>
+<p class="font-bold mt-4 hidden text-center" id="form-status"></p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="border-slate-800 border-t bg-slate-900 py-8">
+<div class="mx-auto container px-6">
+<div class="flex items-center flex-col md:flex-row justify-between gap-4">
+<div class="font-bold text-2xl bg-clip-text bg-gradient-to-r from-indigo-400 text-transparent to-purple-400" data-translate="name">محمود عبدالله</div>
+<div class="text-sm text-slate-500"><span data-translate="copyright">جميع الحقوق محفوظة</span> 2026 ©</div>
+<div class="flex gap-4"></div>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
