@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=00b4d8&height=200&section=header&text=Mahmoud%20Project&fontSize=80&animation=fadeIn" />
 
   <h1>💎 Modern Digital Identity</h1>
 
