@@ -32,7 +32,7 @@ This project represents a high-end web solution tailored for **Mahmoud**, showca
 * **Pixel-Perfect:** Every element is meticulously placed for visual harmony.
 * **Fluid UX:** Designed to guide the user naturally through the content.
 
----
+----
 
 <div align="center">
   <h3>Let's Connect</h3>
