@@ -27,11 +27,6 @@ This isn't just a website; it's a digital identity. Crafted with a focus on **Hi
 * **Accessibility:** Built with WCAG standards in mind for a truly inclusive experience.
 
 ---
-
-## 📸 Visual Showcase
-> **Tip for Mustafa:** Upload your best mockup image here to let the design speak!
-> `![Preview](link-to-your-image.png)`
-
 ---
 
 <div align="center">
